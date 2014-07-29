@@ -10,17 +10,12 @@ public class ShellSorter<T extends Comparable<T>> implements Sorter<T> {
         }
         for (int currentStep = initialStep; currentStep >= 1; currentStep /= 3) {
             for (int i = currentStep; i < tab.length; i++) {
-                T temp = tab[i];
                 int j;
                 for (j = i; j >= currentStep && tab[j].compareTo(tab[j - currentStep]) <= 0; j -= currentStep) {
-                    if (temp.compareTo(tab[j - currentStep]) < 0) {
-                        tab[j] = tab[j - currentStep];
-                    } else {
-                        break;
-                    }
+                    SorterHelper.swap(tab, j, j - currentStep);
                 }
-                tab[j] = temp;
             }
         }
     }
+
 }

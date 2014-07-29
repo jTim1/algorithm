@@ -30,5 +30,4 @@ public class InsertionSorterTest<T extends Comparable<T>> {
 
         Assert.assertArrayEquals(expectedTab, actualTab);
     }
-
 }

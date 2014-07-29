@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ShellSorterTest<T extends Comparable<T>> {
 
-    //@Test
+    @Test
     public void should_sort_an_array_of_character() {
         ShellSorter<Character> shellSorter = new ShellSorter<Character>();
         Character actualTab[] = new Character[]
@@ -16,7 +16,6 @@ public class ShellSorterTest<T extends Comparable<T>> {
         shellSorter.sort(actualTab);
 
         Assert.assertArrayEquals(expectedLongesult, actualTab);
-
     }
 
     @Test
